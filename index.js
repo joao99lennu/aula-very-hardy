@@ -1,19 +1,31 @@
 $("#btnLogin").click(
     function(){
-        login=
-        {
-            'usuario' : document.getElementById('inputEmail').Value,
-            'senha' : document.getElementById('inputEmail').value
+        $.ajax({
+            type='GET',
+            url='http://jsonplaceholder.typicode.com/users',
+            success: function(data){
 
-        };
+            },
+            error:function(data){
 
-    console.log("Essa é uma mensagem de log");
-    console.log(
-        document.getElementById('inputEmail').value
+            }
 
-    );
-
-    console.log(login);
-    
-    )
+        })
+       // login =
+        //{
+            //'usuario' :  document.getElementById('inputEmail').value,
+           // 'senha' :  document.getElementById('inputEmail').value
         
+        //};
+
+        //if(login.senha == '1234'){
+           // document.getElementById('resultado').innerHTML= '<b>bem vindo</b>'
+           // alert("bem-vindo");
+        //} else{
+           // document.
+           // alert("usuario ou senha errada")
+        //}
+        
+       
+    //}
+)
